@@ -1,0 +1,17 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            // "args": ["--dataset", "MELD", "--lr", "1e-4", "--dropout", "0.2", "--batch_size", "32", "--gnn_layers", "2"] // python --dataset MELD --lr 1e-4 --dropout 0.2 --batch_size 32 --gnn_layers 2
+            "args": ["--dataset", "MELD", "--lr", "1e-4", "--dropout", "0.2", "--batch_size", "32", "--gnn_layers", "2", "--moe_routing_method", "hard"] 
+        }
+    ]
+}
