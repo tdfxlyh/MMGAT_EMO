@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def plt_fscore_and_loss(all_test_fscore, all_train_loss, all_valid_loss, all_test_loss, test_fscore, train_loss, valid_loss, test_loss):
+    if not os.path.exists('./pic/'):
+        os.makedirs('./pic/')
     all_test_fscore.append(test_fscore)
     all_train_loss.append(train_loss)
     all_valid_loss.append(valid_loss)
@@ -96,7 +98,7 @@ def parse_args():
 
 if __name__ == '__main__':
 
-    path = './saved_models/'  # 日志 模型保存路径
+    path = './saved_models/'  # 模型保存路径
     if not os.path.exists(path):
         os.makedirs(path)
 
